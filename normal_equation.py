@@ -11,7 +11,7 @@ plt.rcParams['figure.figsize'] = (12.0, 9.0)
 # Preprocessing input data
 
 # Read the file with pandas
-data = pd.read_csv('data.csv')
+data = pd.read_csv('linear_regression_data.csv')
 
 # Define variables from columns in the dataset. iloc integer based position.
 # np.array takes in the data as row vectors, transpose them to column vectors.
