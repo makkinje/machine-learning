@@ -53,8 +53,6 @@ print(theta) # print out parameters
 
 # Blue is 0, Green is 1
 plt.scatter(x1,x2,c=y,cmap='winter')
-#plt.colorbar()
-#plt.show()
 
 # Plot decision line
 s1 = np.linspace(4, max(x_short[0]), 100)
