@@ -11,7 +11,7 @@ plt.rcParams['figure.figsize'] = (12.0, 9.0)
 # Preprocessing input data
 
 # Read the file with pandas
-data = pd.read_csv('linear_regression_data.csv')
+data = pd.read_csv('linear_regression_data.csv', header=None)
 
 # Define variables from columns in the dataset. iloc integer based position.
 x = data.iloc[:,0] # 0 column is x
@@ -26,7 +26,7 @@ plt.show()
 theta0 = theta1 = 0 # define linear equation parameters, set to zero
 
 alpha = 0.0002 # learning rate
-num = 1000000 # number of iterations to perform gradient descent
+num = 100000 # number of iterations to perform gradient descent
 
 n = float(len(x)) # number of elements in x
 
@@ -37,9 +37,6 @@ for i in range(num):
 
     d0 = 1/n*(sum(htheta-y)) # derivative with respect to j=0
     d1 = 1/n*(sum(x*(htheta-y))) # derivative with respect to j=1
-
-    temp0 = theta0
-    temp1 = theta1
 
     theta0 = theta0 - alpha*d0
     theta1 = theta1 - alpha*d1
